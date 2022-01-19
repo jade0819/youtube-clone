@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './components/shared/Layout';
-import youtubeData from './data/youtubeData';
+import youtubeData from './json/youtubeData';
 
 
 const App = () => {

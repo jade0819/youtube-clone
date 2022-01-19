@@ -2,8 +2,12 @@
 
 Youtube clone coding project
 
-# shared Layout
+# Structure
 
-- Main page
+- shared Layout
   - Header
   - Menu
+
+# design
+
+- header
