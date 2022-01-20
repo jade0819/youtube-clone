@@ -1,14 +1,20 @@
 import React from 'react';
-import Layout from './components/shared/Layout';
-import youtubeData from './json/youtubeData';
+import './css/reset.css';
+
+import { Routes,  Route } from "react-router-dom";
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
 
 
 const App = () => {
   
   return (
-    <Layout>
-      <div>콘텐츠!</div>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/explore" element={<Explore/>} />
+      <Route path="/subscription" element={<Subscription/>} />
+    </Routes>
   );
 };
 

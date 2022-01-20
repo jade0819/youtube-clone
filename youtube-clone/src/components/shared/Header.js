@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.module.css';
+import styles from './css/Header.module.css';
 import youtube_logo from '../../data/youtube_logo.png';
 
 import { FiMenu } from "react-icons/fi";
@@ -8,12 +8,11 @@ import { BsGrid3X3Gap } from 'react-icons/bs';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 
 
-const Header = () => {
+const Header = ({menuFlag, setMenuFlag}) => {
     return (
         <div className={styles.header}>
-
             <div className={styles.tab}>
-                <FiMenu className={styles.icon} />
+                <FiMenu className={styles.icon} onClick={() => setMenuFlag(!menuFlag)} />
                 <img src={youtube_logo} alt="로고" className={styles.logo} />
             </div>
 
