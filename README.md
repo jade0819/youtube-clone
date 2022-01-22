@@ -12,3 +12,9 @@ Youtube clone coding project
 
 - Menu button
 - Explore media query
+
+# Library
+
+react-icon
+router
+moment

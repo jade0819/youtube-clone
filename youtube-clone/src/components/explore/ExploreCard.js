@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './ExploreCard.module.css';
+import { ProcessViewCount } from '../../utils';
+import 'moment/locale/ko';
+import moment from 'moment';
 
 
 const ExploreCard = ( {data} ) => {
@@ -20,8 +23,12 @@ const ExploreCard = ( {data} ) => {
                         >
                         {data.channelTitle}
                         </a>
-                        <div className={styles.view}>{data.viewCount}</div>
-                        <div className={styles.time}>{data.date}</div>
+                        <div className={styles.view}>
+                            { ProcessViewCount(data.viewCount) }
+                        </div>
+                        <div className={styles.time}>
+                            { moment(data.date).fromNow() }
+                        </div>
                     </div>
                     <div className={styles.desc}>{data.description}</div>
                 </div>

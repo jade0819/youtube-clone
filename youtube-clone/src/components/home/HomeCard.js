@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './css/HomeCard.module.css';
+import { ProcessViewCount } from '../../utils';
+import 'moment/locale/ko';
+import moment from 'moment';
 
 
 const HomeCard = ( data, index ) => {
     const {id, title, thumbnail, channelId, channelThumbnail, channelTitle, viewCount, date} = data;
-
+    
     return (
         <a
             href={`https://www.youtube.com/watch?v=${id}`}
@@ -30,8 +33,12 @@ const HomeCard = ( data, index ) => {
                     <div className={styles.title}>{title}</div>
                     <div className={styles.uploader}>{channelTitle}</div>
                     <div className={styles.flex}>
-                        <div className={styles.view}>{viewCount}</div>
-                        <div className={styles.date}>{date}</div>
+                        <div className={styles.view}>
+                            { ProcessViewCount(viewCount) }
+                        </div>
+                        <div className={styles.date}>
+                            { moment(date).fromNow() }
+                        </div>
                     </div>
                 </div>
             </div>
