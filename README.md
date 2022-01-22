@@ -8,6 +8,7 @@ Youtube clone coding project
   - Header
   - Menu
 
-# design
+# Responsive
 
-- header
+- Menu button
+- Explore media query

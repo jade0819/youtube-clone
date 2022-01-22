@@ -3,18 +3,8 @@ import styles from './css/Explore.module.css';
 import Layout from '../components/shared/Layout';
 import ContentsLayout from '../components/shared/ContentsLayout';
 import youtubeData from '../json/youtubeData.json';
+import ExploreCard from '../components/explore/ExploreCard';
 
-
-const ExploreCard = (data, index) => {
-    return (
-        <div key={`explore-card-${index}`}>
-            <div>{index}</div>
-            <div>제목: {data.title}</div>
-            <div>업로더: {data.channelTitle}</div>
-            <br />
-        </div>
-    );
-}
 
 const Explore = () => {
 
@@ -22,7 +12,7 @@ const Explore = () => {
         <Layout activeMenu="explore">
             <ContentsLayout>
                 {
-                    youtubeData['data'].map( ExploreCard )
+                    youtubeData['data'].map( (data, index) => <ExploreCard key={`explore-card-${index}`} data={data}/> )
                 }
             </ContentsLayout>
         </Layout>
