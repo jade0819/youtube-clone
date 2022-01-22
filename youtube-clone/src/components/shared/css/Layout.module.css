@@ -3,6 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   overflow: overlay;
   flex-direction: column;
@@ -16,6 +17,12 @@
 
 .contents {
   /* display: flex; */
-  flex: 1;
   margin-left: 240px;
+  flex: 1;
+}
+
+@media screen and (max-width: 911px) {
+  .contents {
+    margin-left: 72px;
+  }
 }

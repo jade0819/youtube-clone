@@ -12,7 +12,7 @@ const Layout = ( {children, activeMenu} ) => {
         <div className={styles.container}>
             <Header menuFlag={menuFlag} setMenuFlag={setMenuFlag} />
             <div className={styles.layout}>
-                <Menu activeMenu={activeMenu} menuFlag={menuFlag} />
+                { menuFlag && <Menu activeMenu={activeMenu} /> }
                 <div className={styles.contents}>{children}</div>
             </div>
         </div>

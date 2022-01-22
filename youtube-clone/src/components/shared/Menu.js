@@ -7,25 +7,23 @@ import { MdSubscriptions } from "react-icons/md";
 
 
 
-const Menu = ( {activeMenu, menuFlag} ) => {
+const Menu = ( {activeMenu} ) => {
     return (
-        <div>
-            {
-                menuFlag && 
-                <div className={styles.menu}>
-                    <Link to="/" className={activeMenu === 'home' ? styles.focused : styles.link}>
-                        <TiHome className={styles.icon} />홈
-                    </Link>
+        <div className={styles.menu}>
+            <Link to="/" className={activeMenu === 'home' ? styles.focused : styles.link}>
+                <TiHome className={styles.icon} />
+                <div className={styles.text}>홈</div>
+            </Link>
 
-                    <Link to="/explore" className={activeMenu === 'explore' ? styles.focused : styles.link}>
-                        <FaRegCompass className={styles.icon} />탐색
-                    </Link>
+            <Link to="/explore" className={activeMenu === 'explore' ? styles.focused : styles.link}>
+                <FaRegCompass className={styles.icon} />
+                <div className={styles.text}>탐색</div>
+            </Link>
 
-                    <Link to="/subscription" className={activeMenu === 'subscription' ? styles.focused : styles.link}>
-                        <MdSubscriptions className={styles.icon} />구독
-                    </Link>
-                </div>
-            }
+            <Link to="/subscription" className={activeMenu === 'subscription' ? styles.focused : styles.link}>
+                <MdSubscriptions className={styles.icon} />
+                <div className={styles.text}>구독</div>
+            </Link>
         </div>
     );
 };
