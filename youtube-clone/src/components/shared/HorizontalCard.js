@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './ExploreCard.module.css';
+import styles from './css/HorizontalCard.module.css';
 import { ProcessViewCount } from '../../utils';
 import 'moment/locale/ko';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 
-const ExploreCard = ( {data} ) => {
+const HorizontalCard = ( {data} ) => {
     return (
         <a href={`https://www.youtube.com/watch?v=${data.id}`}>
             <div className={styles.card}>
@@ -37,4 +38,4 @@ const ExploreCard = ( {data} ) => {
     );
 };
 
-export default ExploreCard;
+export default HorizontalCard;

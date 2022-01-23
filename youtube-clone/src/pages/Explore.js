@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './css/Explore.module.css';
 import Layout from '../components/shared/Layout';
 import ContentsLayout from '../components/shared/ContentsLayout';
-import youtubeData from '../json/youtubeData.json';
-import ExploreCard from '../components/explore/ExploreCard';
+import youtubeData from '../data/youtubeData.json';
+import HorizontalCard from '../components/shared/HorizontalCard';
 
 
 const Explore = () => {
@@ -12,7 +12,7 @@ const Explore = () => {
         <Layout activeMenu="explore">
             <ContentsLayout>
                 {
-                    youtubeData['data'].map( (data, index) => <ExploreCard key={`explore-card-${index}`} data={data}/> )
+                    youtubeData['data'].map( (data, index) => <HorizontalCard key={`explore-card-${index}`} data={data}/> )
                 }
             </ContentsLayout>
         </Layout>

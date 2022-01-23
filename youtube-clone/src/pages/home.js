@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './css/Home.module.css';
-import youtubeData from '../json/youtubeData.json';
+import youtubeData from '../data/youtubeData.json';
 import Layout from '../components/shared/Layout';
 import HomeFilter from '../components/home/HomeFilter';
 import HomeCard from '../components/home/HomeCard';
