@@ -14,16 +14,9 @@ const Header = ({menuFlag, setMenuFlag, searchKeyword}) => {
     const [searchText, setSearchText] = useState(searchKeyword ? searchKeyword : '');
 
     const navigate = useNavigate();
-    // const onGoSearch = () => {
-    //     if( !searchText ) return;
-    //     navigate(`/search/${searchText}`, {state: {searchText: searchText}});
-    // }
-    // const onEnterKey =(e) => {
-    //     if (e.key == 'Enter') onGoSearch();
-    // }
     const onGoSearch = () => {
         if( !searchText ) return;
-        console.log(searchText);
+        navigate(`/search/${searchText}`, {state: {searchText: searchText}});
     }
     const onEnterKey =(e) => {
         if (e.key == 'Enter') onGoSearch();
