@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './css/HorizontalCard.module.css';
+import styles from './css/SearchCard.module.css';
 import { ProcessViewCount } from '../../utils';
 import 'moment/locale/ko';
 import moment from 'moment';
 
 
-const HorizontalCard = ( {data} ) => {
+const SearchCard = ( {data} ) => {
+
     return (
         <a href={`https://www.youtube.com/watch?v=${data.id}`}>
             <div className={styles.card}>
@@ -17,12 +18,6 @@ const HorizontalCard = ( {data} ) => {
                 <div className={styles.info}>
                     <div className={styles.title}>{data.title}</div>
                     <div className={styles.meta}>
-                        <a
-                            href={`https://www.youtube.com/channel/${data.channelId}`}
-                            className={styles.uploader}
-                        >
-                        {data.channelTitle}
-                        </a>
                         <div className={styles.view}>
                             { ProcessViewCount(data.viewCount) }
                         </div>
@@ -30,6 +25,17 @@ const HorizontalCard = ( {data} ) => {
                             { moment(data.date).fromNow() }
                         </div>
                     </div>
+                    <a
+                        className={styles.uploader}
+                        href={`https://www.youyube.com/channel/${data.channelId}`}
+                    >
+                        <img 
+                            className={styles['channel-image']}
+                            src={data.channelThumbnail}
+                            alt={`${data.channelTitle} 프로필 사진`}
+                        />
+                        <div className={styles.name}>{data.channelTitle}</div>
+                    </a>
                     <div className={styles.desc}>{data.description}</div>
                 </div>
             </div>
@@ -37,4 +43,4 @@ const HorizontalCard = ( {data} ) => {
     );
 };
 
-export default HorizontalCard;
+export default SearchCard;

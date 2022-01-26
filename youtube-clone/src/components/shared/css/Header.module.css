@@ -29,17 +29,38 @@
 .logo {
   padding-left: 16px;
 }
+/* .input {
+  height: 40px;
+  border: 1px solid #d3d3d3;
+  border-right: none;
+  box-sizing: border-box;
+  flex: 1;
+} */
 .input {
-  height: 30px;
+  /* height: 30px; */
+  height: 40px;
   border: 1px solid #d3d3d3;
   box-sizing: border-box;
   flex: 1;
 }
+/* .search-btn {
+  border: 1px solid #d3d3d3;
+  background-color: #f8f8f8;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 64px;
+  margin: 0;
+} */
 .search-icon {
   width: 24px;
-  height: 24px;
+  height: 34px;
   padding: 2px 20px;
   border: 1px solid #d3d3d3;
   background-color: #f8f8f8;
   cursor: pointer;
+  /* width: 24px;
+  height: 24px;
+  color: #030303;
+  cursor: pointer; */
 }

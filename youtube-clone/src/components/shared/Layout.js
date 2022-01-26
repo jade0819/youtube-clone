@@ -13,7 +13,7 @@ const Layout = ( {children, activeMenu} ) => {
             <Header menuFlag={menuFlag} setMenuFlag={setMenuFlag} />
             <div className={styles.layout}>
                 { menuFlag && <Menu activeMenu={activeMenu} /> }
-                <div className={styles.contents}>{children}</div>
+                <div className={styles.contents} style={menuFlag ? null : {marginLeft:'0'}}>{children}</div>
             </div>
         </div>
     );

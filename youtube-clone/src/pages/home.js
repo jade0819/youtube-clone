@@ -32,6 +32,7 @@ const Home = () => {
 
     return (
         <Layout activeMenu="home">
+            {/* <div style={{backgroundColor:'#f9f9f9', height:'100%'}}>*홈</div> */}
             <div className={styles.header}>
                 { target.map(targetList) }
             </div>
