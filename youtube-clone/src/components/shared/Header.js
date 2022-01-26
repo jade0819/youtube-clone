@@ -10,17 +10,25 @@ import { BsGrid3X3Gap } from 'react-icons/bs';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 
 
-const Header = ({menuFlag, setMenuFlag}) => {
-    const [searchText, setSearchText] = useState(null);
+const Header = ({menuFlag, setMenuFlag, searchKeyword}) => {
+    const [searchText, setSearchText] = useState(searchKeyword ? searchKeyword : '');
 
     const navigate = useNavigate();
+    // const onGoSearch = () => {
+    //     if( !searchText ) return;
+    //     navigate(`/search/${searchText}`, {state: {searchText: searchText}});
+    // }
+    // const onEnterKey =(e) => {
+    //     if (e.key == 'Enter') onGoSearch();
+    // }
     const onGoSearch = () => {
         if( !searchText ) return;
-        navigate(`/search/${searchText}`, {state: {searchText: searchText}});
+        console.log(searchText);
     }
     const onEnterKey =(e) => {
         if (e.key == 'Enter') onGoSearch();
     }
+    
 
     return (
         <div className={styles.header}>

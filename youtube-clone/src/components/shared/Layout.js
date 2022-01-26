@@ -4,13 +4,13 @@ import Header from './Header';
 import Menu from './Menu';
 
 
-const Layout = ( {children, activeMenu} ) => {
+const Layout = ( {children, activeMenu, searchKeyword} ) => {
 
     const [menuFlag, setMenuFlag] = useState(true);
 
     return (
         <div className={styles.container}>
-            <Header menuFlag={menuFlag} setMenuFlag={setMenuFlag} />
+            <Header menuFlag={menuFlag} setMenuFlag={setMenuFlag} searchKeyword={searchKeyword} />
             <div className={styles.layout}>
                 { menuFlag && <Menu activeMenu={activeMenu} /> }
                 <div className={styles.contents} style={menuFlag ? null : {marginLeft:'0'}}>{children}</div>

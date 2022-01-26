@@ -29,13 +29,6 @@
 .logo {
   padding-left: 16px;
 }
-/* .input {
-  height: 40px;
-  border: 1px solid #d3d3d3;
-  border-right: none;
-  box-sizing: border-box;
-  flex: 1;
-} */
 .input {
   /* height: 30px; */
   height: 40px;
@@ -43,15 +36,6 @@
   box-sizing: border-box;
   flex: 1;
 }
-/* .search-btn {
-  border: 1px solid #d3d3d3;
-  background-color: #f8f8f8;
-  border-radius: 0 2px 2px 0;
-  cursor: pointer;
-  height: 40px;
-  width: 64px;
-  margin: 0;
-} */
 .search-icon {
   width: 24px;
   height: 34px;
@@ -64,3 +48,19 @@
   color: #030303;
   cursor: pointer; */
 }
+/* .input {
+  height: 40px;
+  border: 1px solid #d3d3d3;
+  border-right: none;
+  box-sizing: border-box;
+  flex: 1;
+}
+.search-btn {
+  border: 1px solid #d3d3d3;
+  background-color: #f8f8f8;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  height: 40px;
+  width: 64px;
+  margin: 0;
+} */

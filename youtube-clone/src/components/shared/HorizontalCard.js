@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './css/HorizontalCard.module.css';
-import { ProcessViewCount } from '../../utils';
-import 'moment/locale/ko';
-import moment from 'moment';
+import { ProcessViewCount, ProcessUploadDate } from '../../utils';
+// import 'moment/locale/ko';
+// import moment from 'moment';
 
 
 const HorizontalCard = ( {data} ) => {
@@ -27,7 +27,8 @@ const HorizontalCard = ( {data} ) => {
                             { ProcessViewCount(data.viewCount) }
                         </div>
                         <div className={styles.time}>
-                            { moment(data.date).fromNow() }
+                            {/* { moment(data.date).fromNow() } */}
+                            { ProcessUploadDate(data.date) }
                         </div>
                     </div>
                     <div className={styles.desc}>{data.description}</div>

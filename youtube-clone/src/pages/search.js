@@ -21,7 +21,7 @@ const Search = () => {
 
 
     return (
-        <Layout activeMenu="subscription">
+        <Layout activeMenu="subscription" searchKeyword={searchText}>
             <ContentsLayout>
                 {
                     searchData.length > 0 ?
